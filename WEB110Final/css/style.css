@@ -1,0 +1,295 @@
+:root{
+  --mint: #6bac94;
+  --mintLesser: #5d8878;
+  --brown: #3f2d23;
+  --brownLesser: #312119;
+  --spaceBetweenCards: 10px; /* Space between Cards/header/pieces/whatever */
+  --columnScaleRatio: 80%; /* Percentage split of columns */
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+  margin-right: auto;
+  margin-left:  auto; 
+
+  max-width: 960px;
+  
+  padding-right: 10px;
+  padding-left:  10px;
+  background-color: #444444;
+  border-radius: 1em;
+  padding-bottom: 1px;
+  
+}
+
+body{
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  padding: 10px;
+  background: var(--brown);
+}
+  
+.header{
+  position: relative;
+  top: 10px;
+  padding: 30px;
+  text-align: center;
+  background-color: var(--brown);
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  
+  box-shadow: var(--brownLesser) 5px 5px;
+  z-index: 1;
+  position: relative;
+}
+
+.header h1{
+  font-size: 50px;
+  margin-top: 5px;
+  padding-top: 1em;
+  color: #ffffff;
+}
+
+.topnav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  
+  background-color: var(--brown);
+  
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  
+  box-shadow: var(--brownLesser) 5px 5px, var(--brownLesser) 5px 0px;
+  z-index: 1;
+  position: relative;
+}
+
+.topnav{
+  position: -webkit-sticky; /* For Safari, again */
+  position: sticky;
+  top: -0.5px; /* THIS IS TO FIX A WEIRD BUG WITH CHROME WHERE THERES A 1PX MARGIN BETWEEN THE STICKY PART AND THE TOP OF THE SCREEN. I SPENT SO LONG ON THIS ONLY TO DISCOVER THAT TWITTER OF ALL PLACES FIGURED IT OUT THAT YOU CAN JUST RAISE IT BY HALF A PIXEL AND NOW I"M JUST MAD. */
+  z-index: 5; /* THIS IS TO FIX AN ISSUE WHERE THE AUDIO PLAYER WOULD OVERLAP WITH THE STICKY NAV ON SINGLE-COLUMN MODE. */
+  
+}
+  
+.topnav img{
+  display: block;
+  position: relative;
+  width: 3em;
+  height: 3em;
+  padding: 0px;
+}
+
+.topnav li{
+  float: left;
+  height: 3em;
+  line-height: 3em;
+  
+}
+
+.topnav li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0 16px 0 16px;
+  text-decoration: none;
+  border-radius: 1em;
+  font-weight: bold;
+}
+
+.topnav li .active{
+  background-color: var(--mint);
+}
+
+.button a:hover{
+  background-color: var(--mint);
+}
+
+.leftcolumn{   
+  float: left;
+  width: var(--columnScaleRatio);
+}
+
+.rightcolumn{
+  float: left;
+  width: calc(100% - var(--columnScaleRatio));
+  background-color: #444444;
+  padding-left: var(--spaceBetweenCards); /* this */
+  display: flex;
+  flex-direction: column;
+  padding-right: calc(var(--spaceBetweenCards) / 2);
+}
+
+div.header{
+  margin-right: 5px;
+}
+ul{
+  width: calc(100% - 5px);
+}
+
+ol li{
+  padding-bottom: 5px;
+}
+
+ol:last-child{
+  padding-bottom: 0px;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 1em;
+}
+
+img .weirdAspectR{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h2{
+  font-size: x-large;
+}
+
+.card{
+  background-color: var(--mint);
+  padding: 20px;
+  margin-top: var(--spaceBetweenCards); /* THIS */
+  border-radius: 1em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: #5d8878 5px 5px;
+  z-index: 1;
+  position: relative;
+}
+
+.card li{
+  margin-left: -1em;
+}
+
+.card a{
+  color: var(--brown);
+  font-weight: bold;
+}
+
+table{
+  color: #ffffff;
+  background-color: var(--brown);
+  border-radius: 1em;
+  padding: 5px;
+  width: 100%;
+  border: 2px solid var(--mint);
+  border-spacing: 5px;
+}
+table th, table td{
+  border: 2px solid var(--mint);
+  border-radius: 0.5em;
+  padding: 5px;
+  text-align: center;
+}
+
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer{
+  padding: 20px;
+  text-align: center;
+  background: var(--brown);
+  margin-top: var(--spaceBetweenCards);
+  margin-bottom: 10px;
+  border-radius: 1em;
+  color: #ffffff;
+  box-shadow: var(--brownLesser) 5px 5px;
+}
+
+.footer a{
+  font-weight: bold;
+  color: var(--mint);
+}
+
+.musicWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1px;
+  gap: 10px;
+}
+
+.musicWrapper *{
+  flex: 1;
+}
+
+
+/* Responsive layout - when screen less than 800px wide, make columns stack on top of each other */
+@media screen and (max-width: 800px){
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+
+  .musicWrapper{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 728px){
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+
+  .musicWrapper{
+    display: block;
+  }
+
+  .header{
+    padding-top: 0px;
+    padding-bottom: 0.1px;
+  }
+
+  .topnav li{
+    float: none;
+    height: 3em;
+    line-height: 3em;
+  }
+
+  .topnav{
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .topnav ul li:first-child{
+    display: none;
+  }
+}
+
+/* SCROLLBAR SETTINGS */
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track/backg/barbase */
+::-webkit-scrollbar-track {
+  background: var(--brown); 
+}
+ 
+/* Handle/TheBarItself */
+::-webkit-scrollbar-thumb {
+  background: var(--mint); 
+  border-radius: 1em;
+}

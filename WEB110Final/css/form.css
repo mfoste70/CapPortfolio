@@ -1,0 +1,38 @@
+input[type=email],  input[type=text], textarea, select {
+  
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #bbe4d5;
+  font-size:medium;
+}
+
+#nameBox{
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+input[type=submit], input[type=reset]{
+  width: 45%;
+  background-color: var(--brown);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+input:focus, textarea {
+  outline: none;
+}
+
+#formFunctionButtons{
+  display: flex;
+  justify-content:space-around
+}

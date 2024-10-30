@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Maxwell Foster" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Ch14 Exercise - Mobile-First-Nav</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav class="navbar">
+          <a href="index.html" class="nav-brand"
+            ><img src="assets/logo.png" alt=""
+          /></a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="individual.html" class="nav-link indiv">Individuals</a>
+            </li>
+            <li class="nav-item">
+              <a href="youth.html" class="nav-link youth">Youth</a>
+            </li>
+            <li class="nav-item">
+              <a href="families.html" class="nav-link families">Families</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="donate.html" class="nav-link cta">Help/Donate</a>
+              <!-- NOT FUNCTIONAL -->
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <!-- End Hamburg Class-->
+        </nav>
+      </header>
+      <main class="main">
+        <img
+          class="hero"
+          src="assets/Everyone.webp"
+          alt="A collage of various faces from a multitude of backgrounds. All formerly involved at reStart."
+        />
+        <section class="lead">
+          <h1>We are here to help.</h1>
+          <h3>Empowering people. Ending homelessness. Inspiring hope.</h3>
+          <p>
+            At reStart, we exist to end homelessness in Kansas City. To do so,
+            we believe we must serve and accept everyone. We tackle homelessness
+            from all angles of the housing continuum.
+          </p>
+          <a href="#">Read More About Us</a>
+        </section>
+        <section class="redirect">
+          <h3>Support Services:</h3>
+          <div class="cardBase">
+            <div class="card indiv">
+              <img src="assets/Individuals.jpg" alt="" /><a
+                href="individual.html"
+                >Individual</a
+              >
+            </div>
+            <div class="card youth">
+              <img src="assets/youth.webp" alt="" /><a href="youth.html"
+                >Youth</a
+              >
+            </div>
+            <div class="card families">
+              <img src="assets/Families.jpg" alt="" /><a href="families.html"
+                >Family</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="left-section">
+          <img
+            src="assets/logo-black.png"
+            alt="Black and white logo for reStart"
+          />
+          <div class="stacked-icons">
+            <img src="assets/icn-in.png" alt="icon link to instagram" />
+            <img src="assets/icn-f.png" alt="icon link to facebook" />
+            <img src="assets/icn-li.png" alt="icon link to linked-in" />
+            <img src="assets/icn-y.png" alt="icon link to youtube" />
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="contact">
+            <h4>Contact</h4>
+            <p>
+              918 East 9th Street <br />
+              Kansas City, MO 64106-3072 <br />
+              816.472.5664
+            </p>
+          </div>
+
+          <div class="copyright">
+            <h4>Copyright</h4>
+            <p>reStart &copy; 2024 All Rights Reserved</p>
+          </div>
+        </div>
+        <div>
+          <h4><a href="process.html">Link to Process Page</a></h4>
+        </div>
+      </footer>
+    </div>
+    <!-- End of Wrapper -->
+  </body>
+  <script src="js/menu.js"></script>
+</html>

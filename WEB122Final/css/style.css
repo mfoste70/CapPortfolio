@@ -1,0 +1,407 @@
+:root{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  --indivColor: #605071;
+  --indivColorLight: #cfc4db;
+  --youthColor: #819e79;
+  --youthColorLight: #d6ebd1;
+  --familyColor: #26688e;
+  --familyColorLight: #d4e1e9;
+  --generalGray: #575959;
+  --offWhite: #dadada;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: var(--generalGray);
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+}
+.wrapper {
+  width: 90%;
+  margin: auto;
+  margin-top: 6em;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  
+  background-color: var(--offWhite);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+/* Menu Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 5em;
+  border-radius: 6px;
+  
+  box-shadow: 0px 4px 4px var(--generalGray);
+
+  z-index: 4;
+}
+.nav-brand {
+  font-size: 2.5rem;
+  text-decoration: none;
+  margin-left: 0em;
+
+  
+
+}
+.hamburger {
+  display: block;
+  cursor: pointer;
+  height: 70px;
+  padding-top: 1.5em;
+  z-index: 5;
+}
+.bar {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 5px auto;
+  border-radius: 6px;
+  background-color: #08b;
+  transition: all .3s ease;
+}
+.nav-menu {
+  list-style: none;
+  padding: .5rem;
+  position: fixed;
+  right: 5%;
+  top: -35%;
+  gap: 0;
+  flex-direction: column;
+  width: 30%;
+  text-align: center;
+  transition: .3s;
+  background-color: var(--offWhite);
+
+  border-bottom-left-radius: 6px;
+  z-index: 3;
+}
+.nav-menu.active {
+  right: 5%;
+  top: 70px;
+  box-shadow: 0px 4px 4px var(--generalGray);
+}
+.nav-item {
+  margin: 1em 0;
+}
+.nav-link {
+  text-decoration: none;
+  font-weight: bold;
+  transition: .5s ease;
+  padding: .5em;
+  color: var(--generalGray);
+
+  border-radius: 6px;
+}
+
+/* Color Decorations for Nav Bar */
+.indiv {
+  color: var(--indivColor);
+}
+.youth {
+  color: var(--youthColor);
+}
+.families {
+  color: var(--familyColor);
+}
+.cta {
+  background-color: var(--generalGray);
+  color: var(--offWhite);
+  margin-left: auto;
+}
+
+
+.nav-link:hover:not(.cta) {
+  background-color: #ddd;
+  filter: brightness(120%);
+}
+.cta:hover {
+  color: #ffffff;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Main */
+.hero {
+  border: solid var(--generalGray) 6px;
+  border-radius: 6px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+
+  
+}
+
+section.indiv {
+  background-color: var(--indivColorLight);
+}
+section.youth {
+  background-color: var(--youthColorLight);
+}
+section.families {
+  background-color: var(--familyColorLight);
+}
+
+.lead, .redirect, .cardBase {
+  background-color: var(--offWhite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  gap: 1em;
+
+  border-radius: 6px;
+
+  width: fit-content;
+  margin: 1em auto;
+  padding: 1em;
+}
+h1 {
+  font-size: 48px;
+  text-align: center;
+  margin: 0;
+}
+h3 {
+  font-size: 32px;
+  text-align: center;
+  margin: 0;
+}
+p {
+  text-align: center;
+}
+.lead a {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  border-radius: 6px;
+  background-color: var(--generalGray);
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  width: fit-content;
+  text-decoration: none;
+
+  border: none;
+  padding: .5em;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+.card a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: .5em;
+  color: #fff;
+
+  border-radius: 6px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+}
+.card img {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.card.indiv  a  {
+  background-color: var(--indivColor);
+}
+.card.indiv img {
+  border: solid var(--indivColor) 6px;
+  border-radius: 6px;
+}
+.card.youth  a  {
+  background-color: var(--youthColor);
+}
+.card.youth img {
+  border: solid var(--youthColor) 6px;
+  border-radius: 6px;
+}
+.card.families  a  {
+  background-color: var(--familyColor);
+}
+.card.families img {
+  border: solid var(--familyColor) 6px;
+  border-radius: 6px;
+}
+
+.content.cardBase {
+  background-color: var(--offWhite);
+  margin: 1em 0;
+  padding: 1em 2em;
+  border-radius: 6px;
+}
+.image-side{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-side img {
+  max-height: 300px;
+}
+
+
+/* Footer */
+.footer {
+  width: 100%;
+  align-items: center;
+  gap: 1em;
+
+  background-color: var(--offWhite);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.footer, .left-section, .right-section {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+}
+.stacked-icons {
+  display: flex;
+  flex-direction: column;
+}
+.contact, .copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left-section > img {
+  height: 160px;
+  max-height: 160px;
+}
+
+/* Seprate Rules for process page as I learned the day before this was due that they all needed to use the same CSS and structure instead of using seprate CSS/styles for  fundamentally different sites. */
+body.process {
+  font-family: "Atkinson Hyperlegible";
+}
+.header.process {
+  background-color: var(--offWhite);
+}
+.header.process h1, .header.process h2 {
+  text-align: center;
+}
+.card {
+  background-color: var(--offWhite);
+  padding: 1em;
+  margin: 1em;
+  border-radius: 6px;
+}
+.card li{
+  margin-left: -1em;
+}
+body.process img {
+  box-shadow: none;
+}
+body.process .card a {
+  box-shadow: none
+}
+body.process img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .5em;
+  width: 100%;
+  border-radius: 1.5em;
+}
+body.process a.link {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  border-radius: 6px;
+  background-color: var(--generalGray);
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  width: fit-content;
+  text-decoration: none;
+
+  border: none;
+  padding: .5em;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.needsBorder {
+  border: solid 6px var(--generalGray);
+  border-radius: 6px;
+}
+
+
+/* Tablet/Medium Screen */
+@media (min-width: 60em) {
+  .wrapper {
+    width: 100%;
+  }
+  .nav-brand {
+    width: auto;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+  }
+  .nav-item {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .nav-item .cta {
+    margin-left: auto;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  .redirect {
+    background: linear-gradient(90deg, rgba(96,80,113,.6) 0%, rgba(129,158,121,.6) 50%, rgba(38,104,142,.6) 100%);
+  }
+  .cardBase {
+    flex-direction: row;
+    margin: 0 10px;
+    background: none;
+  }
+  .cardBase.content {
+    flex-direction: column;
+  }
+  .content-core {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+  .content-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
